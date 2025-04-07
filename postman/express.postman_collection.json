@@ -1,0 +1,637 @@
+{
+	"info": {
+		"_postman_id": "8c756bf0-127d-4f2c-b212-70e2f50dacd1",
+		"name": "express",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31634253"
+	},
+	"item": [
+		{
+			"name": "v1",
+			"item": [
+				{
+					"name": "Register User Account",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"user1\",\r\n  \"password\": \"pass1234\",\r\n  \"role\": \"operator\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/users/register",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register Admin Account",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"admin\",\r\n  \"password\": \"pass\",\r\n  \"role\": \"admin\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/users/register",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"user\",\r\n  \"password\": \"pass\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/users/login",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "submitFormWithoutAttachment",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data; boundary=----WebKitFormBoundaryP5ovDiacBYB7WDju",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nameOfApplicant",
+									"value": "NewCilent",
+									"type": "text"
+								},
+								{
+									"key": "guardianName",
+									"value": "kjjasdf",
+									"type": "text"
+								},
+								{
+									"key": "cnic",
+									"value": "11111-1111115-1",
+									"type": "text"
+								},
+								{
+									"key": "dateOfBirth",
+									"value": "2025-03-01",
+									"type": "text"
+								},
+								{
+									"key": "religion",
+									"value": "islam",
+									"type": "text"
+								},
+								{
+									"key": "domicile",
+									"value": "malakand",
+									"type": "text"
+								},
+								{
+									"key": "passportNo",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "mailingAddress",
+									"value": "test@ex.com",
+									"type": "text"
+								},
+								{
+									"key": "permanentAddress",
+									"value": "Thoru Road, Mardan",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "Mardan",
+									"type": "text"
+								},
+								{
+									"key": "district",
+									"value": "Mardan",
+									"type": "text"
+								},
+								{
+									"key": "country",
+									"value": "Pakistan",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "jalal_shah@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "phoneNoRes",
+									"value": "0931-8564562",
+									"type": "text"
+								},
+								{
+									"key": "officeNo",
+									"value": "0515-4654425",
+									"type": "text"
+								},
+								{
+									"key": "mobileNo",
+									"value": "0300-1234566",
+									"type": "text"
+								},
+								{
+									"key": "nextOfKinName",
+									"value": "Shabir",
+									"type": "text"
+								},
+								{
+									"key": "nextOfKinRelation",
+									"value": "Father",
+									"type": "text"
+								},
+								{
+									"key": "nextOfKinCnic",
+									"value": "12111-2222228-4",
+									"type": "text"
+								},
+								{
+									"key": "nextOfKinDateOfBirth",
+									"value": "2025-03-01",
+									"type": "text"
+								},
+								{
+									"key": "nextOfKinPassport",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "plotSize",
+									"value": "10 Marla",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/api/clients/submitForm",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"clients",
+								"submitForm"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "submitFormWithAttachment",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data; boundary=----WebKitFormBoundaryP5ovDiacBYB7WDju",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nameOfApplicant",
+									"value": "jalal",
+									"type": "text"
+								},
+								{
+									"key": "guardianName",
+									"value": "farooq",
+									"type": "text"
+								},
+								{
+									"key": "cnic",
+									"value": "11111-1111115-3",
+									"type": "text"
+								},
+								{
+									"key": "dateOfBirth",
+									"value": "2025-03-01",
+									"type": "text"
+								},
+								{
+									"key": "religion",
+									"value": "islam",
+									"type": "text"
+								},
+								{
+									"key": "domicile",
+									"value": "mardan",
+									"type": "text"
+								},
+								{
+									"key": "passportNo",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "mailingAddress",
+									"value": "test@ex.com",
+									"type": "text"
+								},
+								{
+									"key": "permanentAddress",
+									"value": "Thoru Road, Mardan",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "Mardan",
+									"type": "text"
+								},
+								{
+									"key": "district",
+									"value": "Mardan",
+									"type": "text"
+								},
+								{
+									"key": "country",
+									"value": "Pakistan",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "jalal_shah@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "phoneNoRes",
+									"value": "0931-8564562",
+									"type": "text"
+								},
+								{
+									"key": "officeNo",
+									"value": "051-54654425",
+									"type": "text"
+								},
+								{
+									"key": "mobileNo",
+									"value": "03001234566",
+									"type": "text"
+								},
+								{
+									"key": "nextOfKinName",
+									"value": "Shabir",
+									"type": "text"
+								},
+								{
+									"key": "nextOfKinRelation",
+									"value": "Father",
+									"type": "text"
+								},
+								{
+									"key": "nextOfKinCnic",
+									"value": "11111-1111111-2",
+									"type": "text"
+								},
+								{
+									"key": "nextOfKinDateOfBirth",
+									"value": "2025-03-01",
+									"type": "text"
+								},
+								{
+									"key": "nextOfKinPassport",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "plotSize",
+									"value": "10 Marla",
+									"type": "text"
+								},
+								{
+									"key": "attachments",
+									"type": "file",
+									"src": "/C:/Users/illusion/Desktop/sample2.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/api/clients/submitForm",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"clients",
+								"submitForm"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "submitFormWithMultipleAttachments",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data; boundary=----WebKitFormBoundaryP5ovDiacBYB7WDju",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nameOfApplicant",
+									"value": "jalal",
+									"type": "text"
+								},
+								{
+									"key": "guardianName",
+									"value": "farooq",
+									"type": "text"
+								},
+								{
+									"key": "cnic",
+									"value": "11111-1111114-1",
+									"type": "text"
+								},
+								{
+									"key": "dateOfBirth",
+									"value": "2025-03-01",
+									"type": "text"
+								},
+								{
+									"key": "religion",
+									"value": "islam",
+									"type": "text"
+								},
+								{
+									"key": "domicile",
+									"value": "mardan",
+									"type": "text"
+								},
+								{
+									"key": "passportNo",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "mailingAddress",
+									"value": "test@ex.com",
+									"type": "text"
+								},
+								{
+									"key": "permanentAddress",
+									"value": "Thoru Road, Mardan",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "Mardan",
+									"type": "text"
+								},
+								{
+									"key": "district",
+									"value": "Mardan",
+									"type": "text"
+								},
+								{
+									"key": "country",
+									"value": "Pakistan",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "jalal_shah@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "phoneNoRes",
+									"value": "0931-8564562",
+									"type": "text"
+								},
+								{
+									"key": "officeNo",
+									"value": "051-54654425",
+									"type": "text"
+								},
+								{
+									"key": "mobileNo",
+									"value": "03001234566",
+									"type": "text"
+								},
+								{
+									"key": "nextOfKinName",
+									"value": "Shabir",
+									"type": "text"
+								},
+								{
+									"key": "nextOfKinRelation",
+									"value": "Father",
+									"type": "text"
+								},
+								{
+									"key": "nextOfKinCnic",
+									"value": "11111-1111111-3",
+									"type": "text"
+								},
+								{
+									"key": "nextOfKinDateOfBirth",
+									"value": "2025-03-01",
+									"type": "text"
+								},
+								{
+									"key": "nextOfKinPassport",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "plotSize",
+									"value": "10 Marla",
+									"type": "text"
+								},
+								{
+									"key": "attachments",
+									"type": "file",
+									"src": [
+										"/C:/Users/illusion/Desktop/sample.jpg",
+										"/C:/Users/illusion/Desktop/sample2.jpg"
+									]
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/api/clients/submitForm",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"clients",
+								"submitForm"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View Client Information",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"cnic\":\"11111-1111113-1\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/clients/viewClientInfo",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"clients",
+								"viewClientInfo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addPlot",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"plotPhase\": \"Phase 3\",\r\n  \"plotBlock\": \"Block C\",\r\n  \"plotStreet\": \"Street 41\",\r\n  \"plotNo\": \"112\",\r\n  \"plotSize\": \"15 Marla\",\r\n  \"isCorner\": false,\r\n  \"isParkfacing\": false,\r\n  \"onMainboulevard\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/plots/addPlot",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"plots",
+								"addPlot"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "jwtToken",
+			"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXIiLCJyb2xlIjoib3BlcmF0b3IiLCJpYXQiOjE3NDE5NDM0OTYsImV4cCI6MTc0MTk0NzA5Nn0.uriD8zT5EIAq6CMkVs6BhA9aTPSBNWv4917d43OMeVkqo7uu0h-xEW_RH3jjbvXPTFk4fnSjJ_xWAvFAMzFuiQ",
+			"type": "string"
+		},
+		{
+			"key": "URL",
+			"value": "http://localhost:5000/api",
+			"type": "string"
+		}
+	]
+}
